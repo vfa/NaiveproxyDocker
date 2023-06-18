@@ -68,7 +68,7 @@ echo "Password:" $trojan_password
 echo "-----------------------------------------------"
 echo "NaiveProxy Configuration:"
 echo "Server:" $domainName
-echo "Port: 9443"
+echo "Port: 8443"
 echo "Username: superuser"
 echo "Password:" $trojan_password
 echo "-----------------------------------------------"
@@ -90,7 +90,7 @@ cat <<-EOF >./info.txt
 	-----------------------------------------------
 	NaiveProxy Configuration:
 	Server: $domainName
-	Port: 9443
+	Port: 8443
 	Username: superuser
 	Password: $trojan_password
 	-----------------------------------------------
