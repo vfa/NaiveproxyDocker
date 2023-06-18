@@ -2,7 +2,7 @@ version: '3.6'
 services:
   caddy:
     image: pocat/naiveproxy
-    container_name: breakwall_caddy2_with_naiveproxy
+    container_name: mynai
     restart: always
     environment:
       PATH: "/etc/naiveproxy/Caddyfile"
@@ -26,7 +26,7 @@ services:
 
   xray:
     image: teddysun/xray
-    container_name: breakwall_xray
+    container_name: myxr
     restart: always
     volumes:
       - ./xray/config.json:/etc/xray/config.json
