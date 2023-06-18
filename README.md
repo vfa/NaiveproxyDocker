@@ -141,7 +141,7 @@ Password: 26ca6873b4ed
 -----------------------------------------------
 NaiveProxy Configuration:
 Server: abc.com
-Port: 443
+Port: 8443
 Username: superuser
 Password: 26ca6873b4ed
 -----------------------------------------------
