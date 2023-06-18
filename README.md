@@ -1,6 +1,7 @@
 # Breakwall
 
-这个项目是用于快速地使用Docker搭建breakwall服务(Vless+Trojan+Naiveproxy)
+教程FORK来源于 maidoudouo/XRay_Trojan_Naiveproxy_Docker
+修复一些BUG，添加个人喜好参数
 
 ### 证书
 
@@ -72,10 +73,21 @@ sudo apt-get install docker-ce
 
 ## 安装Docker Compose（容器编排工具）
 ```
-sudo curl -L https://github.com/docker/compose/releases/download/v2.10.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-docker-compose --version
+#docker compose部署
+vi /etc/profile
+DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+export PATH=$PATH:DOCKER_CONFIG
+#保存退出,执行生效指令：
+. /etc/profile
+#创建路径：
+mkdir -p $DOCKER_CONFIG/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.14.2/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+#添加执行权限
+chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+#执行
+docker compose --version
 ```
+出现版本提示完成。
 
 ## 安装Git用于克隆代码
 
@@ -97,15 +109,17 @@ chmod +x tcp.sh
 ./tcp.sh
 ```
 
-## 下载源码
+## 创建目录,下载源码
 
 ```
-git clone https://github.com/maidoudouo/XRay_Trojan_Naiveproxy_Docker
+mkdir /data/
+cd /data/
+git clone https://github.com/vfa/NaiveproxyDocker
 ```
 
 ## Setting
 
-### 一键脚本设置
+### 一键脚本设置，执行的前提必须做好域名映射！！！
 
 只需输入域名即可（eg: hello.com）
 
@@ -131,7 +145,7 @@ Port: 443
 Username: superuser
 Password: 26ca6873b4ed
 -----------------------------------------------
-Please run 'docker-compose up -d' to build!
+Please run 'docker compose up -d' to build!
 Enjoy it!
 ```
 同时会保存信息到info.txt中方便查阅
@@ -146,7 +160,7 @@ Enjoy it!
 
 ## 构建
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 
