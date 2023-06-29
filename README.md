@@ -76,6 +76,7 @@ sudo apt-get install docker-ce
 #docker compose部署
 vi /etc/profile
 DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+export DOCKER_CONFIG
 export PATH=$PATH:$DOCKER_CONFIG/cli-plugins
 #保存退出,执行生效指令：
 . /etc/profile
