@@ -125,6 +125,10 @@ git clone https://github.com/vfa/NaiveproxyDocker
 只需输入域名即可（eg: hello.com）
 
 ```
+#docker-compose
+export PATH=$PATH:$DOCKER_CONFIG/cli-plugins
+bash OneKeySet.sh
+
 ./OneKeySet.sh
 Please input your server domain name(eg: abc.com): abc.com
 Your domain name is: abc.com
