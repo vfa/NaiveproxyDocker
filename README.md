@@ -125,7 +125,7 @@ git clone https://github.com/vfa/NaiveproxyDocker
 只需输入域名即可（eg: hello.com）
 
 ```
-#docker-compose
+#docker-compose环境变量不存在时需要执行export指令。
 export PATH=$PATH:$DOCKER_CONFIG/cli-plugins
 bash OneKeySet.sh
 
