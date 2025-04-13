@@ -76,6 +76,7 @@ echo "Please run 'docker-compose up -d' to build!"
 echo "Enjoy it!"
 
 cat <<-EOF >./info.txt
+        https://$domainName:4443/
 	-----------------------------------------------
 	XRay Configuration:
 	VLESS:
