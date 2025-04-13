@@ -25,7 +25,7 @@
           "streamSettings": {
               "network": "tcp",
               "security": "xtls",
-              "tlsSettings": {
+              "xtlsSettings": {
                   "rejectUnknownSni": true,
                   "minVersion": "1.2",
                   "alpn": [
