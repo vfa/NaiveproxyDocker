@@ -10,7 +10,7 @@
               "clients": [
                   {
                       "id": "98bc7998-8e06-4193-84d2-38f2e10ee763",
-                      "flow": "xtls-rprx-vision",
+                      "flow": "xtls-rprx-direct",
                       "level": 0
                   }
               ],
@@ -24,7 +24,7 @@
           },
           "streamSettings": {
               "network": "tcp",
-              "security": "tls",
+              "security": "xtls",
               "tlsSettings": {
                   "rejectUnknownSni": true,
                   "minVersion": "1.2",
