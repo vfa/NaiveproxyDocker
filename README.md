@@ -127,7 +127,7 @@ git clone https://github.com/vfa/NaiveproxyDocker
 ```
 #docker-compose环境变量不存在时需要执行export指令。
 export PATH=$PATH:$DOCKER_CONFIG/cli-plugins
-bash OneKeySet.sh
+cd NaiveproxyDocker;bash OneKeySet.sh
 
 ./OneKeySet.sh
 Please input your server domain name(eg: abc.com): abc.com
