@@ -1,6 +1,6 @@
 #docker compose环境具备，则直接安装以下指令：
 ```
-mkdir /data/
+mkdir -p /data/
 cd /data/
 git clone https://github.com/vfa/NaiveproxyDocker
 cd NaiveproxyDocker;bash OneKeySet.sh
