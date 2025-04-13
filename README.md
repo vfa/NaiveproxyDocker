@@ -1,3 +1,15 @@
+#docker compose环境具备，则直接安装以下指令：
+```
+mkdir /data/
+cd /data/
+git clone https://github.com/vfa/NaiveproxyDocker
+cd NaiveproxyDocker;bash OneKeySet.sh
+输入域名
+docker compose up 测试日志
+docker compose down 关闭
+docker compose up -d 挂后台
+```
+
 # Breakwall
 
 教程FORK来源于 maidoudouo/XRay_Trojan_Naiveproxy_Docker
