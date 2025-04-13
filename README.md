@@ -5,9 +5,9 @@ cd /data/
 git clone https://github.com/vfa/NaiveproxyDocker
 cd NaiveproxyDocker;bash OneKeySet.sh
 输入域名
-docker compose up 测试日志
-docker compose down 关闭
-docker compose up -d 挂后台
+docker compose up #测试日志
+docker compose down #关闭
+docker compose up -d #挂后台
 ```
 
 # Breakwall
