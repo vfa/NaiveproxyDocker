@@ -55,6 +55,7 @@ randomDomain=$(openssl rand -hex 16)
 sed -i "s/randomDomain/$randomDomain/g" ./caddy/Caddyfile
 
 echo "-----------------------------------------------"
+echo "https://$domainName:4443/"
 echo "XRay Configuration:"
 echo "VLESS:"
 echo "Server:" $domainName
